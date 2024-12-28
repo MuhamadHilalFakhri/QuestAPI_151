@@ -38,7 +38,7 @@ fun  Mahasiswa.toUiStateMhs():InsertUiState = InsertUiState(
     insertUiEvent = toInsertUiEvent()
 )
 
-fun Mahasiswa.toUiStateMhs():InsertUiEvent = InsertUiEvent(
+fun Mahasiswa.toInsertUiEvent():InsertUiEvent = InsertUiEvent(
     nim = nim,
     nama = nama,
     alamat = alamat,
