@@ -1,6 +1,5 @@
 package com.example.pertemuan12.ui.home.screen
 
-import android.widget.Space
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -43,7 +42,6 @@ import com.example.pertemuan12.navigation.DestinasiNavigasi
 import com.example.pertemuan12.ui.home.CostumeTopAppBar
 import com.example.pertemuan12.ui.home.viewmodel.HomeUiState
 import com.example.pertemuan12.ui.home.viewmodel.HomeViewModel
-import com.example.pertemuan12.ui.home.viewmodel.InsertViewModel
 import com.example.pertemuan12.ui.home.viewmodel.PenyediaViewModel
 
 
@@ -132,7 +130,7 @@ fun HomeStatus(
 fun OnLoading(modifier: Modifier = Modifier){
     Image(
         modifier = modifier.size(200.dp),
-        painter = painterResource(R.drawable.loading_img),
+        painter = painterResource(R.drawable.ic_connection_error),
         contentDescription = stringResource(R.string.loading)
     )
 }
