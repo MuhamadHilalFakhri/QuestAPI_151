@@ -1,8 +1,7 @@
-package com.example.pertemuan12.repository
+package com.example.pertemuan12.navigation
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.navigation.NavController
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
@@ -14,7 +13,6 @@ import com.example.pertemuan12.ui.home.screen.HomeScreen
 
 @Composable
 fun PengelolaHalaman(
-    modifier: Modifier = Modifier,
     navController: NavHostController = rememberNavController()){
     NavHost(
         navController = navController,

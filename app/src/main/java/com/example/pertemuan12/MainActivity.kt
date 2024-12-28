@@ -11,7 +11,8 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.example.pertemuan12.repository.PengelolaHalaman
+import com.example.pertemuan12.navigation.PengelolaHalaman
+import com.example.pertemuan12.ui.home.viewmodel.MahasiswaApp
 import com.example.pertemuan12.ui.theme.Pertemuan12Theme
 
 class MainActivity : ComponentActivity() {
@@ -21,7 +22,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             Pertemuan12Theme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    PengelolaHalaman(
+                    MahasiswaApp(
                         modifier = Modifier.padding(innerPadding)
                     )
                 }
