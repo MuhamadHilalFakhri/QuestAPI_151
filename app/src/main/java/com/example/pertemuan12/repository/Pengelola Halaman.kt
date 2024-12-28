@@ -13,7 +13,9 @@ import com.example.pertemuan12.ui.home.screen.EntryMhsScreen
 import com.example.pertemuan12.ui.home.screen.HomeScreen
 
 @Composable
-fun PengelolaHalaman(navController: NavHostController = rememberNavController()){
+fun PengelolaHalaman(
+    modifier: Modifier = Modifier,
+    navController: NavHostController = rememberNavController()){
     NavHost(
         navController = navController,
         startDestination = DestinasiHome.route,
