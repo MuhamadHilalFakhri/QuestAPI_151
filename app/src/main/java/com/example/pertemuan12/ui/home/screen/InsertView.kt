@@ -22,12 +22,19 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.input.nestedscroll.nestedScroll
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
+import com.example.pertemuan12.navigation.DestinasiNavigasi
 import com.example.pertemuan12.ui.home.CostumeTopAppBar
 import com.example.pertemuan12.ui.home.viewmodel.HomeViewModel
 import com.example.pertemuan12.ui.home.viewmodel.InsertUiEvent
 import com.example.pertemuan12.ui.home.viewmodel.InsertUiState
 import com.example.pertemuan12.ui.home.viewmodel.InsertViewModel
+import com.example.pertemuan12.ui.home.viewmodel.PenyediaViewModel
 import kotlinx.coroutines.launch
+
+object DestinasiEntry:DestinasiNavigasi{
+    override val route = "item_entry"
+    override val titleRes = "Entry Mhs"
+}
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
