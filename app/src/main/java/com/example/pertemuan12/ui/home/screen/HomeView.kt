@@ -32,7 +32,14 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import com.example.pertemuan12.R
 import com.example.pertemuan12.model.Mahasiswa
+import com.example.pertemuan12.navigation.DestinasiNavigasi
 import com.example.pertemuan12.ui.home.viewmodel.HomeUiState
+
+
+object DestinasiHome:DestinasiNavigasi{
+    override val route ="home"
+    override val titleRes = "Home Mhs"
+}
 
 
 @Composable
