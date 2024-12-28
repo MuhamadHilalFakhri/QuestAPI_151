@@ -22,3 +22,12 @@ data class InsertUiEvent(
     val kelas:String = "",
     val angkatan:String = "",
 )
+
+fun InsertUiEvent.toMhs():Mahasiswa = Mahasiswa(
+    nim = nim,
+    nama = nama,
+    alamat = alamat,
+    jenisKelamin = jenisKelamin,
+    kelas = kelas,
+    angkatan = angkatan
+)
