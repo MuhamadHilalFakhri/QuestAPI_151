@@ -2,6 +2,7 @@ package com.example.pertemuan12.ui.home.screen
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Card
@@ -18,12 +19,47 @@ import com.example.pertemuan12.navigation.DestinasiNavigasi
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.example.pertemuan12.model.Mahasiswa
+import com.example.pertemuan12.ui.home.viewmodel.DetailUiState
 
 object DestinasiDetail : DestinasiNavigasi{
     override val route = "detail"
     const val NIM = "nim"
     val routeWithArg = "$route/{$NIM}"
     override  val titleRes = "Detail Mhs"
+}
+
+@Composable
+fun BodyDetailMhs(
+    modifier: Modifier = Modifier,
+    detailUiState: DetailUiState,
+    retryAction: ()-> Unit = {}
+){
+    when (detailUiState){
+        is DetailUiState.Loading ->{
+            OnLoading(modifier = modifier.fillMaxSize())
+        }
+
+        is DetailUiState.Success->{
+            Column(
+                modifier = modifier
+                    .fillMaxSize()
+                    .padding(16.dp)
+            ) {
+                ItemDetailMhs(mahasiswa = detailUiState.mahasiswa)
+            }
+        }
+
+        is DetailUiState.Error->{
+            OnError(
+                retryAction= retryAction,
+                modifier = modifier.fillMaxSize()
+            )
+        }
+
+        else -> {
+            Text("Unexpected")
+        }
+    }
 }
 
 @Composable
